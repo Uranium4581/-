@@ -16,15 +16,17 @@ int main() {
         
 
         // 条件に基づく計算と出力
-        if (f >= 0 && f < lower_bound) {
-            f = pow(2, n) * f; // f の計算
-            printf("f = %.10lf\n", f); // f の出力
-        } else if (f >= lower_bound && f <= upper_bound) {
-            f = -pow(2, n) * (f - lower_bound); // f の計算
-            printf("f = %.10lf\n", f); // f の出力
-        } else if (f < 0 || f > upper_bound) {
-            f = f - upper_bound; // f の計算
-            printf("f = %.10lf\n", f); // f の出力
+        if (f >= 0 && f < lower_bound) {//0 <= f < 0.5
+            f = pow(2, n) * f; 
+            printf("f = %.10lf\n", f); 
+
+        } else if (f >= lower_bound && f <= upper_bound) {// 0.5 <= f <= 1
+            f = -pow(2, n) * (f - pow(2, -n+1)); 
+            printf("f = %.10lf\n", f); 
+
+        } else if (f < 0 || f > upper_bound) {// 範囲外の場合
+            f = f - upper_bound; 
+            printf("f = %.10lf\n", f); 
         }
     }
 

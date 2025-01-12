@@ -1,0 +1,12 @@
+/.vscode
+# Build directories
+build/
+
+# Executable files
+*.exe
+
+# Object files
+*.o
+
+# Other temporary files
+*.pdf

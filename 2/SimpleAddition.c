@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-#define OFFSET 0.3
+#define OFFSET 0.5
 #define TIME 100
 #define BITWIDTH 64
 
@@ -15,7 +15,7 @@ int main(void) {
 
   // 共用体の型の変数を初期化し，0とする
   DL u;
-  u.d = 0.5;
+  u.d = 0.0;
 
   // バイナリとして変数の変化を表示
   for (int i = 0; i < TIME; i++) {
